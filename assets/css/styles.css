@@ -17,11 +17,13 @@
     font-family: "Inter", sans-serif;
 }
 
-html {
+body {
     background-color: var(--off-black);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    height: 100vh;
 }
 
 #container {
@@ -31,47 +33,51 @@ html {
     align-items: center;
     background-color: var(--dark-grey);
     border-radius: 10px;
-    padding: 20px;
-    margin: 100px 0;
+    padding: 15px;
+    margin-top: auto;
+    width: 280px;
 }
 
 #container img {
-    width: 100px;
+    width: 80px;
     border-radius: 50px;
     margin-bottom: 20px;
 }
 
 #container h1 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 5px;
     color: var(--white);
 }
 
 #container h2 {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 20px;
     font-weight: 400;
     color: var(--green);
 }
 
 #container .description {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--white);
     margin-bottom: 20px;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 #container .button {
     background-color: var(--grey);
     color: var(--white);
+    font-size: 12px;
     font-weight: 600;
     width: 100%;
     text-align: center;
-    padding: 15px 0;
+    /* padding: 15px 0; */
+    padding: 10px 0;
     margin-bottom: 15px;
     border-radius: 10px;
     transition: .3s;
     cursor: pointer;
+
 }
 
 #container .button:hover {
@@ -88,7 +94,7 @@ html {
     font-size: 11px;
     text-align: center;
     color: var(--white);
-    margin-bottom: 20px;
+    margin: auto 0 10px;
 }
 
 .attribution a {
@@ -102,3 +108,36 @@ html {
     text-decoration: underline;
 }
 
+@media(min-width: 350px) {
+    #container {
+        width: 330px;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    #container img {
+        width: 100px;
+    }
+
+    #container h1 {
+        font-size: 24px;
+    }
+
+    #container h2 {
+        font-size: 14px;
+    }
+
+    #container .description {
+        font-size: 14px;
+    }
+
+    #container .button {
+        padding: 15px 0;
+    }
+}
+
+@media(min-width: 700px) {
+    #container {
+        margin-top: auto;
+    }
+}
